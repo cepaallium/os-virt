@@ -1,0 +1,12 @@
+initImage:
+  repository: os-harbor-svc.default.svc.cloudos:443/helm/cloudos-cvs/os-virt-portal
+  tag: ${BUILD_VERSION}
+
+osVirtImg:
+  repository: os-harbor-svc.default.svc.cloudos:443/helm/cloudos-cvs/os-virt
+  tag: ${BUILD_VERSION}
+
+
+global:
+  namespace: cloudos-cvs
+  serviceAccount: os-virt

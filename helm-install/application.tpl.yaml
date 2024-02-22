@@ -1,0 +1,19 @@
+name: cloudos-cvs
+version: ${BUILD_VERSION}
+label: cloudos-cvs
+feature: 暂无
+type: service
+namespace: cloudos-cvs
+description:
+  en: cloudos-cvs
+  zh-CN: cloudos-cvs
+serviceGroup: cloudos-container
+serviceGroupName:
+  en: Container Service
+  zh-CN: 容器服务
+useHarbor: true
+image:
+  os-virt:
+    repository: os-harbor-svc.default.svc.cloudos:443/helm/cloudos-cvs/os-virt
+    tag: ${BUILD_VERSION}
+    file: os-virt-${BUILD_VERSION}.tar

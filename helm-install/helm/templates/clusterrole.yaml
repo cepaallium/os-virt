@@ -1,0 +1,36 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: os-virt
+  labels:
+    app: os-virt
+rules:
+  - apiGroups:
+      - cce.cloudos.com
+    resources:
+      - projects
+      - clusters
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - cce.cloudos.com
+    resources:
+      - projects/finalizers
+      - clusters/finalizers
+    verbs:
+      - update
+  - apiGroups:
+      - cce.cloudos.com
+    resources:
+      - projects/status
+      - clusters/status
+    verbs:
+      - get
+      - patch
+      - update

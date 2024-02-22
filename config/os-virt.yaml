@@ -1,0 +1,11 @@
+web-hook-port: 9443
+web-server-port: 80
+
+log-file: /var/log/os-virt/os-virt.log
+max-size: 1000
+max-backups: 7
+max-age: 1
+compress: true
+log-level: debug
+json-encode: false
+stacktrace-level: error

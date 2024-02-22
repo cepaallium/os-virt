@@ -1,0 +1,15 @@
+{
+  "user": {
+    "default_project_id": "9052ae85792143ff955c35c52e8e41bd",
+    "domain_id": "default",
+    "email": "virtAdmin@fakemail.com",
+    "enabled": true,
+    "name": "virtAdmin",
+    "nickname": "virtAdmin",
+    "extra": {
+      "internal": true
+    },
+    "password": "gAiNHSfFzyucAAu6QjysiRHCD8bVfLU+J9a3f4gkpBbYkkJ9fxqJcSMLJ5hzqw+KQwBLT79WKhaJIA6QLVGkCQkFmkf1Kne+ulNtelBxE3Ayhz4jzsFtHkKIFDyL+y4dVvsDw+KmIBV0VfwNUj6F4oQiwEomVYN+7XP6kvTSNkw=",
+    "role_id": "bc446e28f2314ded942e6c38be0cc85a"
+  }
+}

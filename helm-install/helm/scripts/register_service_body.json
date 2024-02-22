@@ -1,0 +1,26 @@
+{
+  "service": {
+    "host": "os-virt-svc.cloudos-cvs.svc.cloudos",
+    "name": "os-virt",
+    "port": 11690,
+    "protocol": "http",
+    "connect_timeout": 3600000,
+    "write_timeout": 3600000,
+    "read_timeout": 3600000
+  },
+  "routes": [
+    {
+      "protocols": [
+        "http"
+      ],
+      "paths": [
+        "/cloud/virt/v1.0"
+      ],
+      "strip_path": true
+    }
+  ],
+  "serviceExtra": {
+    "tokenType": "keystone",
+    "authHeaderType": "X-Auth-Token"
+  }
+}

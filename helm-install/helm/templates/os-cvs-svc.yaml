@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: os-virt-svc
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    service.edgemesh.kubeedge.io/service-proxy-name: ""
+spec:
+  ports:
+  - port: 11690
+    targetPort: 80
+    protocol: TCP
+    name: os-virt-svc
+  selector:
+    app:  os-virt
+  type: ClusterIP

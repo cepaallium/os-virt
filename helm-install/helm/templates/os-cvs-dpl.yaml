@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: os-virt
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    app: os-virt
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: os-virt
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: os-virt
+    spec:
+      tolerations:
+        - key: node-role.kubernetes.io/master
+          operator: Exists
+          effect: NoSchedule
+      hostname: os-virt
+      nodeSelector:
+        nodeType: controller
+      serviceAccountName: {{ .Values.global.serviceAccount }}
+      containers:
+      - name: os-virt
+        image: {{ .Values.osVirtImg.repository }}:{{ .Values.osVirtImg.tag }}
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /healthz
+            port: 80
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 20
+          successThreshold: 1
+          timeoutSeconds: 10
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /readyz
+            port: 80
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 20
+          successThreshold: 1
+          timeoutSeconds: 10
+        resources:
+          limits:
+            cpu: "8"
+            memory: 8Gi
+          requests:
+            cpu: 400m
+            memory: 1Gi
+        env:
+          - name: demo
+            value: demo
+        ports:
+        - containerPort: 80
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - mountPath: /root/.kube/config
+          name: default-kube-config
+        - mountPath: /etc/localtime
+          name: time
+        - mountPath: /root/.ssh
+          name: ssh
+      terminationGracePeriodSeconds: 5
+      volumes:
+      - hostPath:
+          path: /etc/kubernetes/admin.conf
+        name: default-kube-config
+      - hostPath:
+          path: /etc/localtime
+        name: time
+      - hostPath:
+          path: /root/.ssh
+        name: ssh

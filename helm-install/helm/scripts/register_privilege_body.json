@@ -1,0 +1,661 @@
+{
+  "cloudService": {
+    "product_name": "CloudOS CVS",
+    "product_description": {
+      "zh-CN": {
+        "product_name": "CloudOS CVS"
+      },
+      "en": {
+        "product_name": "CloudOS CVS"
+      }
+    },
+    "description": {
+      "zh-CN": {
+        "serviceName": "轻量化虚拟机引擎"
+      },
+      "en": {
+        "serviceName": "CloudOS CVS"
+      }
+    },
+    "privileges": [
+      {
+        "description": {
+          "en": {
+            "serviceName": "virt manage"
+          },
+          "zh-CN": {
+            "serviceName": "虚拟机管理"
+          }
+        },
+        "name": "os-cce.cluster",
+        "operation": [
+          {
+            "description": {
+              "en": {
+                "serviceName": "Create Cluster"
+              },
+              "zh-CN": {
+                "serviceName": "部署集群"
+              }
+            },
+            "name": "os-cce.cluster.create",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "List Cluster"
+              },
+              "zh-CN": {
+                "serviceName": "查询集群"
+              }
+            },
+            "name": "os-cce.cluster.list",
+            "rolescope": "common"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "Delete Cluster"
+              },
+              "zh-CN": {
+                "serviceName": "删除集群"
+              }
+            },
+            "name": "os-cce.cluster.delete",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "Detail Cluster"
+              },
+              "zh-CN": {
+                "serviceName": "查询集群详情"
+              }
+            },
+            "name": "os-cce.cluster.detail",
+            "rolescope": "common"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "Add Nodes"
+              },
+              "zh-CN": {
+                "serviceName": "添加节点"
+              }
+            },
+            "name": "os-cce.cluster.addNodes",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "Remove Nodes"
+              },
+              "zh-CN": {
+                "serviceName": "删除节点"
+              }
+            },
+            "name": "os-cce.cluster.removeNodes",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "kubernetes upgrade"
+              },
+              "zh-CN": {
+                "serviceName": "k8s升级"
+              }
+            },
+            "name": "os-cce.cluster.k8sUpgrade",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "controller node schedule"
+              },
+              "zh-CN": {
+                "serviceName": "控制节点调度"
+              }
+            },
+            "name": "os-cce.cluster.schedule.controller",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "modify node cordon"
+              },
+              "zh-CN": {
+                "serviceName": "修改节点维护模式"
+              }
+            },
+            "name": "os-cce.cluster.node.cordon",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "delete edge node group"
+              },
+              "zh-CN": {
+                "serviceName": "删除边缘节点组"
+              }
+            },
+            "name": "os-cce.cluster.edge.nodegroup.delete",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "create edge node group"
+              },
+              "zh-CN": {
+                "serviceName": "新建边缘节点组"
+              }
+            },
+            "name": "os-cce.cluster.edge.nodegroup.create",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "update edge node group"
+              },
+              "zh-CN": {
+                "serviceName": "更新边缘节点组"
+              }
+            },
+            "name": "os-cce.cluster.edge.nodegroup.update",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "migrate edge node"
+              },
+              "zh-CN": {
+                "serviceName": "迁移边缘节点"
+              }
+            },
+            "name": "os-cce.cluster.edge.node.migrate",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "update node password"
+              },
+              "zh-CN": {
+                "serviceName": "修改节点密码"
+              }
+            },
+            "name": "paas.cce.node.password.update",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "plugin install"
+              },
+              "zh-CN": {
+                "serviceName": "插件安装"
+              }
+            },
+            "name": "os-cce.cluster.plugin.install",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "plugin upgrade"
+              },
+              "zh-CN": {
+                "serviceName": "插件更新"
+              }
+            },
+            "name": "os-cce.cluster.plugin.upgrade",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "plugin uninstall"
+              },
+              "zh-CN": {
+                "serviceName": "插件卸载"
+              }
+            },
+            "name": "os-cce.cluster.plugin.uninstall",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "edge configuration"
+              },
+              "zh-CN": {
+                "serviceName": "边缘配置"
+              }
+            },
+            "name": "os-cce.cluster.edge.install",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "Cluster managed"
+              },
+              "zh-CN": {
+                "serviceName": "集群纳管"
+              }
+            },
+            "name": "os-cce.cluster.cluster_managed",
+            "rolescope": "system"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "Download cluster KubeConfig file"
+              },
+              "zh-CN": {
+                "serviceName": "下载集群KubeConfig文件"
+              }
+            },
+            "name": "os-cce.cluster.kubeconfig_download",
+            "rolescope": "system"
+          }
+        ]
+      },
+      {
+        "description": {
+          "en": {
+            "serviceName": "CCE Menu display"
+          },
+          "zh-CN": {
+            "serviceName": "CCE菜单显示"
+          }
+        },
+        "name": "os-cce.menu_display",
+        "operation": [
+          {
+            "description": {
+              "en": {
+                "serviceName": "Deployment"
+              },
+              "zh-CN": {
+                "serviceName": "无状态Deployment"
+              }
+            },
+            "name": "os-cce.menu_display.deployment",
+            "rolescope": "common"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "StatefulSet"
+              },
+              "zh-CN": {
+                "serviceName": "有状态StatefulSet"
+              }
+            },
+            "name": "os-cce.menu_display.statefulset",
+            "rolescope": "common"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "DaemonSet"
+              },
+              "zh-CN": {
+                "serviceName": "守护进程集DaemonSet"
+              }
+            },
+            "name": "os-cce.menu_display.daemonset",
+            "rolescope": "common"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "EdgeApplication"
+              },
+              "zh-CN": {
+                "serviceName": "边缘应用EdgeApplication"
+              }
+            },
+            "name": "os-cce.menu_display.edgeapplication",
+            "rolescope": "common"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "Job"
+              },
+              "zh-CN": {
+                "serviceName": "普通任务Job"
+              }
+            },
+            "name": "os-cce.menu_display.job",
+            "rolescope": "common"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "CronJob"
+              },
+              "zh-CN": {
+                "serviceName": "定时任务CronJob"
+              }
+            },
+            "name": "os-cce.menu_display.cronjob",
+            "rolescope": "common"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "Pod"
+              },
+              "zh-CN": {
+                "serviceName": "容器组Pod"
+              }
+            },
+            "name": "os-cce.menu_display.pod",
+            "rolescope": "common"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "Cluster"
+              },
+              "zh-CN": {
+                "serviceName": "集群"
+              }
+            },
+            "name": "os-cce.menu_display.cluster",
+            "rolescope": "common"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "Namespace"
+              },
+              "zh-CN": {
+                "serviceName": "命名空间"
+              }
+            },
+            "name": "os-cce.menu_display.namespace",
+            "rolescope": "common"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "Plugin Market"
+              },
+              "zh-CN": {
+                "serviceName": "插件市场"
+              }
+            },
+            "name": "os-cce.menu_display.plugin_market",
+            "rolescope": "common"
+          }
+        ]
+      },
+      {
+        "description": {
+          "en": {
+            "serviceName": "CCE edge node communication"
+          },
+          "zh-CN": {
+            "serviceName": "CCE边缘节点通信"
+          }
+        },
+        "name": "os-cce.edge_node_communication",
+        "operation": [
+          {
+            "description": {
+              "en": {
+                "serviceName": "Edge node join cluster"
+              },
+              "zh-CN": {
+                "serviceName": "边缘节点加入集群"
+              }
+            },
+            "name": "os-cce.edge_node_communication.join",
+            "rolescope": "user"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "trigger add edge node progress check"
+              },
+              "zh-CN": {
+                "serviceName": "触发添加边缘节点进度检查"
+              }
+            },
+            "name": "os-cce.edge_node_communication.check",
+            "rolescope": "user"
+          },
+          {
+            "description": {
+              "en": {
+                "serviceName": "EdgeNode download install file"
+              },
+              "zh-CN": {
+                "serviceName": "边缘节点安装文件下载"
+              }
+            },
+            "name": "os-cce.edge_node_communication.download",
+            "rolescope": "user"
+          }
+        ]
+      }
+    ]
+  },
+  "apiPrivileges": {
+    "privilegeApiOperations": [
+      {
+        "method": "GET",
+        "operation": "os-cce.cluster.list",
+        "path": "/cloud/cce/v1.0/cluster/list"
+      },
+      {
+        "method": "POST",
+        "operation": "os-cce.cluster.create",
+        "path": "/cloud/cce/v1.0/cluster"
+      },
+      {
+        "method": "DELETE",
+        "operation": "os-cce.cluster.delete",
+        "path": "/cloud/cce/v1.0/cluster/{clusterId}"
+      },
+      {
+        "method": "POST",
+        "operation": "os-cce.cluster.k8sUpgrade",
+        "path": "/cloud/cce/v1.0/cluster/{clusterId}/upgrade/{targetVersion}"
+      },
+      {
+        "method": "GET",
+        "operation": "os-cce.cluster.detail",
+        "path": "/cloud/cce/v1.0/cluster/{clusterId}"
+      },
+      {
+        "method": "POST",
+        "operation": "os-cce.cluster.addNodes",
+        "path": "/cloud/cce/v1.0/cluster/{clusterId}/addNodes"
+      },
+      {
+        "method": "POST",
+        "operation": "os-cce.cluster.removeNodes",
+        "path": "/cloud/cce/v1.0/cluster/{clusterId}/removeNodes"
+      },
+      {
+        "method": "GET",
+        "operation": "os-cce.cluster.schedule.controller",
+        "path": "/cloud/cce/v1.0/cluster/{clusterId}/scheduleOn"
+      },
+      {
+        "method": "GET",
+        "operation": "os-cce.cluster.schedule.controller",
+        "path": "/cloud/cce/v1.0/cluster/{clusterId}/scheduleOff"
+      },
+      {
+        "method": "GET",
+        "operation": "os-cce.cluster.node.cordon",
+        "path": "/cloud/cce/v1.0/server/{nodeName}/cordon"
+      },
+      {
+        "method": "GET",
+        "operation": "os-cce.cluster.node.cordon",
+        "path": "/cloud/cce/v1.0/server/{nodeName}/uncordon"
+      },
+      {
+        "method": "POST",
+        "operation": "os-cce.edge_node_communication.join",
+        "path": "/cloud/cce/v1.0/edge/add"
+      },
+      {
+        "method": "GET",
+        "operation": "os-cce.edge_node_communication.check",
+        "path": "/cloud/cce/v1.0/edge/checkAdd"
+      },
+      {
+        "method": "POST",
+        "operation": "os-cce.edge_node_communication.download",
+        "path": "/os-inspection/v1/inspection/edgeDownload"
+      },
+      {
+        "method": "DELETE",
+        "operation": "os-cce.cluster.edge.nodegroup.delete",
+        "path": "/cloud/cce/v1.0/edge/nodeGroups/delete"
+      },
+      {
+        "method": "POST",
+        "operation": "os-cce.cluster.edge.nodegroup.create",
+        "path": "/cloud/cce/v1.0/edge/nodeGroups/create"
+      },
+      {
+        "method": "PUT",
+        "operation": "os-cce.cluster.edge.nodegroup.update",
+        "path": "/cloud/cce/v1.0/edge/nodeGroups/edgeNodes/update"
+      },
+      {
+        "method": "PUT",
+        "operation": "os-cce.cluster.edge.node.migrate",
+        "path": "/cloud/cce/v1.0/edge/nodeGroups/edgeNodes/migrate"
+      },
+      {
+        "method": "PUT",
+        "operation": "paas.cce.node.password.update",
+        "path": "/cloud/cce/v1.0/server/passwd"
+      },
+      {
+        "method": "POST",
+        "operation": "os-cce.cluster.plugin.install",
+        "path": "/cloud/cce/v1.0/api/v1/clusters/{clusterId}/plugins"
+      },
+      {
+        "method": "PUT",
+        "operation": "os-cce.cluster.plugin.upgrade",
+        "path": "/cloud/cce/v1.0/api/v1/clusters/{clusterId}/plugins"
+      },
+      {
+        "method": "DELETE",
+        "operation": "os-cce.cluster.plugin.uninstall",
+        "path": "/cloud/cce/v1.0/api/v1/clusters/{clusterId}/plugins/{appName}"
+      },
+      {
+        "method": "POST",
+        "operation": "os-cce.cluster.edge.install",
+        "path": "/cloud/cce/v1.0/cluster/edgeConfig/update"
+      },
+      {
+        "method": "PUT",
+        "operation": "os-cce.cluster.cluster_managed",
+        "path": "/cloud/cce/v1.0/cluster/{clusterId}/Managed"
+      },
+      {
+        "method": "PUT",
+        "operation": "os-cce.cluster.cluster_managed",
+        "path": "/cloud/cce/v1.0/cluster/{clusterId}/UnManaged"
+      },
+      {
+        "method": "GET",
+        "operation": "os-cce.cluster.kubeconfig_download",
+        "path": "/cloud/cce/v1.0/cluster/{clusterId}/download/kubeConfig"
+      }
+    ]
+  },
+  "adminPrivileges": {
+    "svc_privileges": [
+      "os-cce.cluster.list",
+      "os-cce.cluster.create",
+      "os-cce.cluster.delete",
+      "os-cce.cluster.detail",
+      "os-cce.cluster.addNodes",
+      "os-cce.cluster.removeNodes",
+      "os-cce.cluster.k8sUpgrade",
+      "os-cce.cluster.schedule.controller",
+      "os-cce.cluster.node.cordon",
+      "os-cce.cluster.edge.nodegroup.delete",
+      "os-cce.cluster.edge.nodegroup.create",
+      "os-cce.cluster.edge.nodegroup.update",
+      "os-cce.cluster.edge.node.migrate",
+      "paas.cce.node.password.update",
+      "os-cce.cluster.cluster_managed",
+      "os-cce.cluster.kubeconfig_download",
+      "os-cce.menu_display.deployment",
+      "os-cce.menu_display.statefulset",
+      "os-cce.menu_display.daemonset",
+      "os-cce.menu_display.edgeapplication",
+      "os-cce.menu_display.job",
+      "os-cce.menu_display.cronjob",
+      "os-cce.menu_display.pod",
+      "os-cce.menu_display.cluster",
+      "os-cce.menu_display.namespace",
+      "os-cce.menu_display.plugin_market",
+      "os-cce.cluster.plugin.install",
+      "os-cce.cluster.plugin.upgrade",
+      "os-cce.cluster.plugin.uninstall",
+      "os-cce.cluster.edge.install"
+    ]
+  },
+  "orgAdminPrivileges": {
+    "svc_privileges": [
+      "os-cce.cluster.list",
+      "os-cce.cluster.detail",
+      "os-cce.menu_display.deployment",
+      "os-cce.menu_display.statefulset",
+      "os-cce.menu_display.daemonset",
+      "os-cce.menu_display.edgeapplication",
+      "os-cce.menu_display.job",
+      "os-cce.menu_display.cronjob",
+      "os-cce.menu_display.pod",
+      "os-cce.menu_display.cluster",
+      "os-cce.menu_display.namespace",
+      "os-cce.menu_display.plugin_market"
+    ]
+  },
+  "userPrivileges": {
+    "svc_privileges": [
+      "os-cce.cluster.list",
+      "os-cce.cluster.detail",
+      "os-cce.edge_node_communication.join",
+      "os-cce.edge_node_communication.check",
+      "os-cce.edge_node_communication.download",
+      "os-cce.menu_display.deployment",
+      "os-cce.menu_display.statefulset",
+      "os-cce.menu_display.daemonset",
+      "os-cce.menu_display.edgeapplication",
+      "os-cce.menu_display.job",
+      "os-cce.menu_display.cronjob",
+      "os-cce.menu_display.pod",
+      "os-cce.menu_display.cluster",
+      "os-cce.menu_display.namespace",
+      "os-cce.menu_display.plugin_market"
+    ]
+  }
+}
